@@ -292,6 +292,8 @@ Boolean CSSymbolIsPrivateExternal(CSSymbolRef sym);
 Boolean CSSymbolIsThumb(CSSymbolRef sym);
 Boolean CSSymbolIsUnnamed(CSSymbolRef sym);
 
+const CFUUIDBytes *CSSymbolOwnerGetCFUUIDBytes(CSSymbolRef sym);
+void CSSymbolOwnerForeachSegment(CSSymbolRef, CSSegmentIterator it);
 
 /*
  * XXX: SymbolOwner functions
@@ -314,14 +316,12 @@ CSSymbolOwnerEditRelocations
 CSSymbolOwnerForeachRegion
 CSSymbolOwnerForeachRegionWithName
 CSSymbolOwnerForeachSection
-CSSymbolOwnerForeachSegment
 CSSymbolOwnerForeachSourceInfo
 CSSymbolOwnerForeachSymbol
 CSSymbolOwnerForeachSymbolWithMangledName
 CSSymbolOwnerForeachSymbolWithName
 CSSymbolOwnerGetArchitecture
 CSSymbolOwnerGetBaseAddress
-CSSymbolOwnerGetCFUUIDBytes
 CSSymbolOwnerGetCompatibilityVersion
 CSSymbolOwnerGetCurrentVersion
 CSSymbolOwnerGetDataFlags
